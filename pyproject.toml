@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "flox-core"
+version = "0.1.0"
+description = "Core library for flox"
+authors = ["Michal Przytulski <michal@przytulski.pl>", "Daniel Ancuta <whisller@gmail.com>"]
+license = "MIT"
+
+packages = [
+    { include = "floxcore" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+python-box = "^4.0"
+anyconfig = "^0.9.0"
+wasabi = "^0.6.0"
+tqdm = "^4.43.0"
+click = "^7.0"
+lazy-load = "^0.8.2"
+loguru = "^0.4.1"
+plumbum = "^1.6.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
