@@ -219,6 +219,5 @@ pip-selfcheck.json
 # custom
 .idea
 .DS_Store
-.python-version
 /.flox
 /flox-core.iml
