@@ -51,6 +51,7 @@ def load_settings(initiated=True, project_directory=None, profile=None, remotes:
     config = anyconfig.load(
         locations,
         ignore_missing=True,
+        ac_template=False,
         ac_parser="toml",
     )
 

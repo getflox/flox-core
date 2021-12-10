@@ -110,7 +110,7 @@ class PluginManager:
         return plugins
 
     def _get_pkg_info(self, pkg_info: str):
-        config_parser = ConfigParser()
+        config_parser = ConfigParser(strict=False)
         config_parser.read_string("[package]\n" + pkg_info)
 
         return dict(config_parser["package"])
