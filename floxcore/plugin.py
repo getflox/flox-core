@@ -89,7 +89,18 @@ class PluginManager:
         plugins = {}
         for entry in iter_entry_points("flox.plugin"):
             plugin = entry.load()()
-            pkg = self._get_pkg_info(entry.dist.get_metadata("PKG-INFO"))
+            pkg = None
+
+            for meta in ("PKG-INFO", "METADATA"):
+                try:
+                    pkg = self._get_pkg_info(entry.dist.get_metadata(meta))
+                    break
+                except FileNotFoundError as e:
+                    pass
+
+            if not pkg:
+                continue
+
             plugin.name = entry.name
             plugin.version = pkg.get("version")
             plugin.description = pkg.get("summary")
