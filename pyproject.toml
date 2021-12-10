@@ -19,6 +19,7 @@ click = "^7.1"
 lazy-load = "^0.8.2"
 loguru = "^0.5"
 plumbum = "^1.7"
+toml = "^0.10.2"
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"
