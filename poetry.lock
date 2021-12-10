@@ -11,7 +11,7 @@ contextvars = {version = "2.4", markers = "python_version < \"3.7\""}
 
 [[package]]
 name = "anyconfig"
-version = "0.12.0"
+version = "0.10.1"
 description = "Library provides common APIs to load and dump configuration files in various formats"
 category = "main"
 optional = false
@@ -300,7 +300,7 @@ dev = ["pytest (>=4.6.2)", "black (>=19.3b0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.2"
-content-hash = "767ab9894641b68b9172f44400c9d3401aaa54885f7e69c4b4d2f18a809a8f18"
+content-hash = "3e3465e9d2bb7372dbae5afd604a2f2e3f5415026f89e199d09aa68dcdc0f496"
 
 [metadata.files]
 aiocontextvars = [
@@ -308,8 +308,8 @@ aiocontextvars = [
     {file = "aiocontextvars-0.2.2.tar.gz", hash = "sha256:f027372dc48641f683c559f247bd84962becaacdc9ba711d583c3871fb5652aa"},
 ]
 anyconfig = [
-    {file = "anyconfig-0.12.0-py2.py3-none-any.whl", hash = "sha256:2119065ad835d0e4cbcb26a58fab0705952c5657c05fa90ef7a11cdecbbafb1f"},
-    {file = "anyconfig-0.12.0.tar.gz", hash = "sha256:3091d7675740686fade85755537f2a7c6ccefa8659c5bb56174e02ded74b96d5"},
+    {file = "anyconfig-0.10.1-py2.py3-none-any.whl", hash = "sha256:60c795cc6ef3e6f0a74182c52dfa6e8825d852b2b9128404e1aef3b84ca077a4"},
+    {file = "anyconfig-0.10.1.tar.gz", hash = "sha256:f04a5490da8563c97fad15810b0debc92351dbd4b8058dfd82d32a30a41e7e5c"},
 ]
 black = [
     {file = "black-21.12b0-py3-none-any.whl", hash = "sha256:a615e69ae185e08fdd73e4715e260e2479c861b5740057fde6e8b4e3b7dd589f"},

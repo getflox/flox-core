@@ -1,9 +1,13 @@
 import abc
+import warnings
 from dataclasses import dataclass
 from os.path import join
 from typing import Any, Tuple
 
-import anyconfig
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
+    import anyconfig
+
 from box import Box
 from loguru import logger
 

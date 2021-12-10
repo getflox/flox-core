@@ -12,7 +12,7 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.6.2"
 python-box = "^5.3"
-anyconfig = "^0.12"
+anyconfig = "^0.10"
 wasabi = "^0.9"
 tqdm = "^4.58"
 click = "^7.1"
