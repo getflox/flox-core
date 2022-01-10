@@ -5,6 +5,7 @@ from typing import Dict
 
 from click import Group
 from lazy_load import lazy
+from loguru import logger
 from pkg_resources import iter_entry_points
 
 
@@ -88,7 +89,8 @@ class PluginManager:
     def _load(self):
         plugins = {}
         for entry in iter_entry_points("flox.plugin"):
-            plugin = entry.load()()
+            logger.debug(f"Loading plugin info: {entry}")
+            plugin = entry.resolve()()
             pkg = None
 
             for meta in ("PKG-INFO", "METADATA"):
