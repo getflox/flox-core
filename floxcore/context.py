@@ -51,7 +51,9 @@ class Flox:
         self.remotes = StateManager(self, join(CONFIG_DIRS.get("user"), "remotes"))
 
         from floxcore.config import load_settings
-        self.settings = load_settings(self.initiated, self.working_dir, self.profile, self.remotes)
+
+        self.settings = load_settings(Flox.plugins, self.initiated, self.working_dir, self.profile, self.remotes)
+
         self.secrets = Manager(self)
 
     @property

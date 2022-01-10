@@ -32,7 +32,11 @@ class ParamDefinition:
             self.default = []
 
 
-def load_settings(initiated=True, project_directory=None, profile=None, remotes: StateManager = None):
+def load_settings(pluginManager, initiated=True, project_directory=None, profile=None, remotes: StateManager = None):
+    settings = {}
+    for name, plugin in pluginManager.all().items():
+        settings[name] = {i.name: i.default for i in plugin.configuration().parameters()}
+
     locations = [
         join(CONFIG_DIRS.get("system"), "settings.toml"),
     ]
@@ -59,7 +63,9 @@ def load_settings(initiated=True, project_directory=None, profile=None, remotes:
         ac_parser="toml",
     )
 
-    return Box(config, default_box=True, box_dots=True)
+    settings.update(config)
+
+    return Box(settings, default_box=True, box_dots=True)
 
 
 class Configuration(abc.ABC):
