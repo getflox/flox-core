@@ -41,6 +41,11 @@ class Manager:
         :param flox: floxcore.context.Flox
         """
         self.flox = flox
+        self.defaults = {}
+        for name, plugin in self.flox.plugins.all().items():
+            for param in plugin.configuration().secrets():
+                self.defaults[f"{name}_{param.name}"] = param.default
+
 
     @with_keychain
     def getone(self, name, profile=None, required=False, ):
@@ -52,6 +57,9 @@ class Manager:
                 val = get_password(location, name)
                 if val:
                     return val
+
+                if name in self.defaults:
+                    return self.defaults.get(name)
             except KeyringLocked:
                 raise KeyringException("Unable to unlock keyring.")
 
