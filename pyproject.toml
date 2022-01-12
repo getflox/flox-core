@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flox-core"
-version = "0.1.2"
+version = "0.1.3"
 description = "Core library for flox"
 authors = ["Michal Przytulski <michal@przytulski.pl>", "Daniel Ancuta <whisller@gmail.com>"]
 license = "MIT"
