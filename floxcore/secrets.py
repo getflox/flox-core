@@ -58,10 +58,11 @@ class Manager:
                 if val:
                     return val
 
-                if name in self.defaults:
-                    return self.defaults.get(name)
             except KeyringLocked:
                 raise KeyringException("Unable to unlock keyring.")
+
+        if name in self.defaults:
+            return self.defaults.get(name)
 
         if required:
             raise MissingConfigurationValue(name)
