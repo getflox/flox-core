@@ -46,7 +46,6 @@ class Manager:
             for param in plugin.configuration().secrets():
                 self.defaults[f"{name}_{param.name}"] = param.default
 
-
     @with_keychain
     def getone(self, name, profile=None, required=False, ):
         if self.flox.initiated:

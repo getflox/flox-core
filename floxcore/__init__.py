@@ -9,6 +9,7 @@ from floxcore.settings import CONFIG_DIRS
 
 KEYCHAIN_PATH = join(CONFIG_DIRS.get("user"), "flox-secrets")
 os.environ["KEYRING_PROPERTY_KEYCHAIN"] = KEYCHAIN_PATH
+os.environ["KEYCHAIN_PATH"] = KEYCHAIN_PATH
 
 
 def wrap(text, wrap_max=200, indent=4):

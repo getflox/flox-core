@@ -63,6 +63,7 @@ def execute_stages(flox: Flox, event: str, features=None, wrapper=tqdm, **kwargs
                 stage(
                     flox=flox,
                     out=output,
+                    features=features,
                     **kwargs,
                     **outputs
                 )
