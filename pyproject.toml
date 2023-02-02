@@ -10,21 +10,28 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.6.2"
-python-box = "^5.3"
-anyconfig = "^0.10"
-wasabi = "^0.9"
-tqdm = "^4.58"
-click = "^7.1"
-lazy-load = "^0.8.2"
-loguru = "^0.5"
-plumbum = "^1.7"
-toml = "^0.10.2"
+python = "^3.8"
+wasabi = "^1.1"
+tqdm = "^4.64.1"
+loguru = "^0.6.0"
+rich = "^13.3.1"
+pyyaml = "^6.0"
+#python-box = "^5.3"
+#anyconfig = "^0.10"
+
+#tqdm = "^4.58"
+#click = "^7.1"
+#lazy-load = "^0.8.2"
+#loguru = "^0.5"
+#plumbum = "^1.7"
+#toml = "^0.10.2"
+python-box = "^6.1.0"
+pyhumps = "^3.8.0"
+
 
 [tool.poetry.dev-dependencies]
-black = "^21.12b0"
-isort = "^5.10"
-bump2version = "^1.0.1"
+black = "^23.0"
+isort = "^5.12.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
