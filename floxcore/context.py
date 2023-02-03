@@ -14,8 +14,8 @@ class Project(object):
     def __init__(self, context):
         self.context = context
         self.id = None
+        self.name = None
         self.description = None
-        self.variables = {}
 
     @property
     def stages(self):
@@ -23,6 +23,13 @@ class Project(object):
         stages.sort()
 
         return stages
+
+    def as_dict(self):
+        return dict(
+            id=self.id,
+            name=self.name,
+            description=self.description
+        )
 
 
 class FloxContext(object):
